@@ -94,8 +94,9 @@ class Wordlist
   end
 end
 
-wordlist = Wordlist.from_file(ARGV[0], 'common_bucket_prefixes.txt')
+wordlist = Wordlist.from_file(ARGV[0], '~/BugBounty/Tools/Recon/lazys3/common_bucket_prefixes.txt')
+wordlist.each { |x| puts x }
 
-puts "Generated wordlist from file, #{wordlist.length} items..."
+#puts "Generated wordlist from file, #{wordlist.length} items..."
 
-Scanner.new(wordlist).scan
+#Scanner.new(wordlist).scan
